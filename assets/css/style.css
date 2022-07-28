@@ -1,0 +1,123 @@
+
+:root{
+    --white:white;
+    --borderCustom:solid 2px white;
+    --black:black;
+    --red:red;
+}
+body
+{
+    background: url(https://images4.alphacoders.com/975/97548.jpg) no-repeat center center/cover;
+
+    height: 100vh;
+    position: relative;
+    /* background-color: red; */
+}
+#open-btn
+{
+    /* background: red; */
+    position: absolute;
+    top:70%;
+    left: 10%;
+
+    width: 15rem;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    background-color: transparent;
+    color: var(--white);
+    border: var(--borderCustom);
+    border-radius: 8px;
+
+    padding: 4px;
+
+    box-shadow: 0 0 3px black;
+
+    transition: .5s;
+}
+#open-btn:hover
+{
+
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.modal-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+    background-color: var(--black);
+    opacity: .8;
+
+}
+
+.modal
+{
+    background-color: var(--white);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: none;
+
+    transform: translate(-50%,-50%);
+
+    width: 150px;
+    height: auto;
+    
+    border-radius: 4px;
+
+    font-size: .9rem;
+    line-height:1.4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    animation: animateModal;
+    animation-duration: .4s;
+    padding: 1rem;
+    
+
+}
+
+#close-btn
+{
+    font-size: 2.7rem;
+
+    transition: .2;
+  
+}
+#close-btn:hover{
+    cursor: pointer;
+
+    color: var(--red);
+    font-size:2.71rem ;
+    
+}
+#close-btn:active{
+    color: red;
+    font-weight: bold;
+}
+
+
+
+/* Modal animation start*/
+@keyframes animateModal {
+    from{
+        top:-300px;
+        opacity: 0;
+    }
+    to{
+        top:50%;
+        opacity:1;
+    }
+    
+}
+/* Modal animation end */
